@@ -26,10 +26,13 @@ namespace CalendarPlayground
             String[] DaysOWeek = new String[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
             var monthIndex = DaysOWeek.ToList<string>().IndexOf(firstdayOfMonth.ToString());
 
+            // days to display (including days before 1st)
             var daysToDisplay = lenghOfMonth + monthIndex;
 
+            // Days o week
             const int coloumns = 7;
 
+            // Rows, worked out from number of days to display
             var rows = Math.Ceiling((daysToDisplay / 7.0));
 
             DateTime[] dateCells = new DateTime[coloumns * (int)rows];
